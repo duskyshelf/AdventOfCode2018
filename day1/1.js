@@ -9,7 +9,7 @@ let count = 0;
 const logCount = () => {
   count++;
 
-  if (count % 10 === 0) {
+  if (count % 100 === 0) {
     console.log('\x1b[2m%s\x1b[0m', count);
   }
 };
