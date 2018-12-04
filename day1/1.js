@@ -1,7 +1,7 @@
 const fs = require('fs');
-var readline = require('readline');
+const readline = require('readline');
 
-var rd = readline.createInterface({
+const rd = readline.createInterface({
   input: fs.createReadStream('./data.txt')
 });
 
@@ -14,13 +14,13 @@ const logCount = () => {
   }
 };
 
-let solution = 0;
+let frequency = 0;
 rd.on('line', function(line) {
   logCount();
 
-  solution += parseInt(line);
+  frequency += parseInt(line);
 });
 
 rd.on('close', function() {
-  console.log('Merry Christmas: ', solution);
+  console.log('Merry Christmas: ', frequency);
 });
